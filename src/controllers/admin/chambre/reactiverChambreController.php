@@ -1,0 +1,17 @@
+<?php
+session_start();
+
+require_once '../../../includes/database.php';
+
+// Mise à jour du statut de toutes les chambres
+$query = "UPDATE chambre SET status = 1 WHERE status = 2";
+$stmt = $pdo->prepare($query);
+
+if ($stmt->execute()) {
+    $_SESSION["success"] = "Toutes les chambres ont été réactivées avec succès.";
+} else {
+    $_SESSION["error"] = "Une erreur est survenue lors de la réactivation des chambres.";
+}
+
+header('Location: ../../../views/admin/pages/chambre.php'); // Redirection vers la page des chambres
+exit();

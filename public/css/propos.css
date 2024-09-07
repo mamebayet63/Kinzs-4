@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.cont {
+  width: 75%;
+}
+
+.baniere {
+  background-color: rgba(0, 82, 72, 1) !important;
+}
+
+.baniere-icon {
+  width: 50px;
+  height: 50px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.baniere-icon i {
+  color: rgba(0, 82, 72, 1) !important;
+}
+
+.line {
+  width: 150px;
+  height: 2vh;
+  background-color: rgba(248, 226, 103, 1) !important;
+  margin-top: 80px;
+}
+
+.rond {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.active {
+  background-color: rgba(0, 82, 72, 1) !important;
+  color: white !important;
+  border-radius: 10px;
+}

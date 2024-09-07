@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-title {
+  font-size: 100px;
+}
+
+.hero-para {
+  font-size: 16px;
+}
+
+.noir {
+  background-color: black !important;
+}
+
+.baniere {
+  background-color: #13292A !important;
+}
+
+.baniere-icon {
+  width: 50px;
+  height: 50px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.baniere-icon i {
+  color: rgba(0, 82, 72, 1) !important;
+}
+
+.ban {
+  margin-top: -50px !important;
+}
+
+.line {
+  width: 150px;
+  height: 2vh;
+  background-color: rgba(248, 226, 103, 1) !important;
+  margin-top: 80px;
+}
+
+.gallerie:hover {
+  background-image: url(../images/gallerie-1-sf.svg) !important;
+}
+
+.gallerie1:hover {
+  background-image: url(../images/gallerie-2-sf.svg) !important;
+}
+
+.gallerie2:hover {
+  background-image: url(../images/gallerie-3-sf.svg) !important;
+}
+
+.gallerie3:hover {
+  background-image: url(../images/gallerie-4-sf.svg) !important;
+}
+
+.pop {
+  background-color: rgba(248, 226, 103, 1) !important;
+}
+
+.call,
+.btn-reserver {
+  background-color: rgba(0, 82, 72, 1) !important;
+}
+/* -------------------css khalil------------------- */
+
+.CardBag {
+  background-color: #f7f7ed;
+}
+.roundede {
+  border-radius: 15px;
+}
+.CardBagTitre {
+  background-color: #f5b41d;
+}
+
+.CardBagTitre2 {
+  background-color: #d9d9d9;
+}
+.CardBagTitre3 {
+  background-color: #13292A;
+  color: #f5b41d;
+  font-size: 11px;
+}
+.monSize {
+  font-size: 11px;
+}
+.couleur2 {
+  color: #5c5c59;
+}
+.monSize2 {
+  font-size: 15px;
+}
+.cont32:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------header------------------ */
+.monCoul2 {
+  color: #ffb100 !important;
+}
+.monBag {
+  background-color: #f7f7ed !important;
+}
+.circle {
+  border-radius: 90%;
+}
+.monBag2 {
+  background-color: #13292A !important;
+  text-align: center !important;
+}
+/* .monCouleur {
+  color: #13292A !important;
+} */
+.monImage {
+  width: 60%;
+}
+.monheader {
+  background-color: #f5f5dc;
+}
+.monBag3 {
+  background-color: #13292A;
+  width: 45px;
+  height: 45px;
+}
+a {
+  text-decoration: none !important;
+}
+
+.monCouleure {
+  color: #13292A;
+  font-size: 22px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.monInput {
+  border-radius: 10px;
+  border: 1px solid black;
+  height: 40px;
+}
+.monBouton {
+  background-color: #ffb100;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+.monBag20 {
+  background-color: #13292A;
+  color: white;
+}
+
+.noire {
+  color: black;
+}
+
+/* Conteneur pour l'image et le texte */
+.image-container {
+  position: relative; /* Positionner le texte au-dessus de l'image */
+  width: 100%;
+  max-width: 500px; /* Ajuster selon vos besoins */
+  height: auto;
+  overflow: hidden; /* Masquer les parties qui débordent */
+}
+
+/* Style de l'image */
+.image-container img {
+  width: 100%;
+  height: auto; /* Maintenir l'aspect ratio de l'image */
+  display: block;
+}
+
+/* Conteneur pour le texte superposé */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Texte caché par défaut */
+  transition: opacity 0.3s ease; /* Transition pour l'apparition */
+}
+
+/* Texte à l'intérieur du conteneur overlay */
+.overlay-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Afficher le texte au survol de l'image */
+.image-container:hover .overlay {
+  opacity: 1; /* Rendre le texte visible */
+}

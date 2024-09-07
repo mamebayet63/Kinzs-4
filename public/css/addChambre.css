@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --btn-color: #38a1ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 0.9rem;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link span {
+  font-size: 16px;
+}
+
+a.active {
+  background-color: #d5daf244 !important;
+  border-left: 5px solid #3b7ddd;
+}
+
+.link-catalogue {
+  background-color: var(--btn-color) !important;
+}
+
+.nom {
+  color: var(--btn-color);
+}
+
+.bordure {
+  width: 100px;
+  height: 5px;
+  background-color: var(--btn-color) !important;
+}
+
+.menu {
+  background-color: #d5daf244 !important;
+  width: 45px;
+  height: 45px;
+}
+
+@media (min-width: 992px) {
+  .contente {
+    margin-left: 225px;
+  }
+  .contente2 {
+    height: 78vh;
+  }
+}
