@@ -139,23 +139,23 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                                 </button>
                             </div>
                             <p class="m-0 text-center p-1 text-white mt-3 fw-bolder monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill"><?= $chambre["nom"] ?></p>
-                            <p class="fw-bold mt-3">Caracteristique</p>
+                            <p class="fw-bold mt-3">Caracteristiques</p>
                             <div class="d-flex gap-2 mt-2">
                                 <?php if ($chambre["television"] == "oui"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-tv-line"></i>
+                                        <i class="ri-tv-2-line"></i>
                                         <span>Television</span>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($chambre["comodite"] == "ventiller"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
                                         <i class="ri-water-flash-line"></i>
-                                        <span>Ventiller</span>
+                                        <span>ventilateur</span>
                                     </div>
                                 <?php else: ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
                                         <i class=" ri-fridge-line"></i>
-                                        <span>Climatiser</span>
+                                        <span>climatiseur</span>
                                     </div>
                                 <?php endif; ?>
                                 <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">

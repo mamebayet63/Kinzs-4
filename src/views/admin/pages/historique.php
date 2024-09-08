@@ -65,7 +65,7 @@ $chambres= getChambres($pdo);
                                 <label for="end_date">Date de fin :</label>
                                 <input type="date" class="form-control p-2 shadow-sm" name="end_date" value="<?= htmlspecialchars($end_date) ?>">
                             </div>
-                            <button type="submit" class="btn btn-primary w-100 mt-2">Filtrez</button>
+                            <button type="submit" class="btn monBag2 text-white w-100 mt-2">Filtrez</button>
                         </form>
                     </div>
                     <div class="row mt-3">
@@ -78,7 +78,7 @@ $chambres= getChambres($pdo);
                                 <label for="admin_email">Email de l'administrateur :</label>
                                 <input type="email" placeholder="identifiant admin" class="mt-2 form-control p-2 shadow-sm" name="admin_email" value="<?= isset($admin_email) ?? "" ?>">
                             </div>
-                            <button type="submit" class="btn btn-primary w-100 mt-2">Filtrez</button>
+                            <button type="submit" class="btn monBag2 text-white w-100 mt-2">Filtrez</button>
                         </form>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ $chambres= getChambres($pdo);
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="text-center">Détails des informations</h5>
+                                                <h5 class="text-center">Détails de la réservation</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">

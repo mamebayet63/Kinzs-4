@@ -104,7 +104,7 @@ $nbReservation = getNombreReservations($pdo);
                                     </div>
                                 </div>
                                 <div class="d-none d-sm-block">
-                                    <p class="m-0 fw-bold">Listes des Résidences</p>
+                                    <p class="m-0 fw-bold">Liste des Résidences</p>
                                 </div>
                                 <div class="d-none d-sm-block">
                                     <p class="m-0 fw-bold">Administrateur</p>
@@ -133,7 +133,7 @@ $nbReservation = getNombreReservations($pdo);
                                     </div>
                                     <div class="col-12 col-sm-6 col-lg-3">
                                         <a href="../forms/formAdd/addResidence.php" class="btn monBag2 text-white d-flex align-items-center gap-2 text-white">
-                                            <span>Nouveaux Residences</span>
+                                            <span>Nouvelle Residence</span>
                                             <i class="ri-apps-2-add-line"></i>
                                         </a>
                                     </div>

@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once '../../../../includes/database.php';
-$errors = $_SESSION["errors"];
+
+// Vérifiez si la clé 'errors' existe dans la session avant de l'utiliser
+$errors = isset($_SESSION["errors"]) ? $_SESSION["errors"] : [];
 unset($_SESSION["errors"]);
 ?>
 
@@ -16,6 +18,7 @@ unset($_SESSION["errors"]);
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="../../../../../public/css/auth.css">
+    <link rel="stylesheet" href="../../../../../public/css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
@@ -42,13 +45,13 @@ unset($_SESSION["errors"]);
                                 <?php endif; ?>
                             </div>
                             <div class="col-12 mt-3">
-                                <input type="nom" name="nom" class="form-control p-3" placeholder="nom administrateur" />
+                                <input type="nom" name="nom" class="form-control p-3" placeholder="Nom administrateur" />
                                 <?php if (!empty($errors["nom"])) : ?>
                                     <li class="text-danger"><?= $errors['nom'] ?></li>
                                 <?php endif; ?>
                             </div>
                             <div class="col-12 mt-3">
-                                <input type="prenom" name="prenom" class="form-control p-3" placeholder="prenom administrateur" />
+                                <input type="prenom" name="prenom" class="form-control p-3" placeholder="Prénom administrateur" />
                                 <?php if (!empty($errors["prenom"])) : ?>
                                     <li class="text-danger"><?= $errors['prenom'] ?></li>
                                 <?php endif; ?>
@@ -64,8 +67,8 @@ unset($_SESSION["errors"]);
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
-                                <button class="btn btn-success text-white w-100">
-                                    Creer Admin
+                                <button class="btn monBag2 text-white w-100">
+                                    Créer Admin
                                 </button>
                             </div>
                         </div>

@@ -115,7 +115,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                         <div class="d-flex align-items-center p-0 p-sm-5" style="background-image: url(public/images/Group36.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100%;">
                             <div>
                                 <div class="w-100 py-5">
-                                    <h1 class="text-white hero-title py-5">Bienvenue aux <br> <span class="monCoul2">Kinz Résidences</span> </h1>
+                                    <h1 class="text-white hero-title py-5">Bienvenue chez <br> <span class="monCoul2">Kinz Résidences</span> </h1>
                                 </div>
 
                             </div>
@@ -239,23 +239,23 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                                 </button>
                             </div>
                             <p class="m-0 text-center p-1 fw-bolder text-white monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill"><?= $chambre["nom"] ?></p>
-                            <p class="fw-bold mt-3">Caracteristique</p>
+                            <p class="fw-bold mt-3 monCouleur">Caracteristiques</p>
                             <div class="d-flex gap-2 mt-2">
                                 <?php if ($chambre["television"] == "oui"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-tv-line"></i>
+                                        <i class="ri-tv-2-line"></i>
                                         <span>Television</span>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($chambre["comodite"] == "ventiller"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
                                         <i class="ri-water-flash-line"></i>
-                                        <span>Ventiller</span>
+                                        <span>ventilateur</span>
                                     </div>
                                 <?php else: ?>
-                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1 CardBagTitre2 text-center">
+                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1 CardBagTitre2 text-center ">
                                         <i class=" ri-fridge-line"></i>
-                                        <span>Climatiser</span>
+                                        <span>climatiseur</span>
                                     </div>
                                 <?php endif; ?>
                                 <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">

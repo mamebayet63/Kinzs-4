@@ -111,10 +111,29 @@ $hasSuspend = null;
                                     </div>
                                 </div>
                                 <div class="d-none d-sm-block">
-                                    <p class="m-0 fw-bold">Listes des Chambres</p>
+                                    <p class="m-0 fw-bold">Liste des Chambres</p>
                                 </div>
-                                <div class="d-none d-sm-block">
-                                    <p class="m-0 fw-bold">Administrateur</p>
+                                <div class="d-sm-flex align-items-center gap-2">
+                                    <div class="dropdown">
+                                        <span class="dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="d-none d-sm-block fw-semibold"><?=$_SESSION['admin_prenom'] ?> <?=$_SESSION['admin_nom'] ?> </span>
+                                            <i class="ri-admin-line fs-4"></i>
+                                        </span>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item d-flex gap-2 align-items-center" href="./historique.php">
+                                                    <i class="ri-chat-history-line"></i>
+                                                    <span>Historiques</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex gap-2 align-items-center" href="../../../controllers/admin/auth/deconnexionController.php">
+                                                    <i class="ri-logout-box-line"></i>
+                                                    <span>Déconnexion</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="d-block d-sm-none mt-4">
                                     <ul class="list-unstyled">
@@ -149,7 +168,7 @@ $hasSuspend = null;
                                 <div class="row mt-4">
                                     <div class="col-12 d-flex justify-content-end align-items-center gap-3  mt-sm-0">
                                         <a href="../forms/formAdd/addChambre.php" class="btn monBag2 text-white d-flex align-items-center gap-2 text-white">
-                                            <span>Nouveaux Chambres</span>
+                                            <span>Nouvelle Chambre</span>
                                             <i class="ri-apps-2-add-line"></i>
                                         </a>
                                         <div>
@@ -161,7 +180,7 @@ $hasSuspend = null;
                                             <?php endforeach; ?>
                                             <?php if ($hasSuspend) : ?>
                                                 <a data-bs-toggle="modal" data-bs-target="#staticBackdropid2" class="btn monBag2 text-white d-flex align-items-center gap-2 ">
-                                                    <span>Reactiver les chambres</span>
+                                                    <span>Reactiver les réservations</span>
                                                     <i class="ri-alert-fill"></i>
                                                 </a>
                                                 <div class="modal fade" id="staticBackdropid2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -171,7 +190,7 @@ $hasSuspend = null;
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <h5 class="text-center">Confirmer la reactivations des chambres</h5>
+                                                                <h5 class="text-center">Confirmer la reactivations des réservations</h5>
                                                                 <div class="d-flex gap-3 justify-content-center">
                                                                     <a href="../../../controllers/admin/chambre/reactiverChambreController.php"><button class="btn monBag2 text-white">Reactiver</button></a>
                                                                     <button class="btn bg-danger text-white" data-bs-dismiss="modal">Annuler</button>
@@ -192,7 +211,7 @@ $hasSuspend = null;
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <h5 class="text-center">Confirmer la suspension des chambres</h5>
+                                                                <h5 class="text-center">Confirmer la suspension des réservations</h5>
                                                                 <div class="d-flex gap-3 justify-content-center">
                                                                     <a href="../../../controllers/admin/chambre/suspendreChambreController.php"><button class="btn bg-danger text-white">Suspendre</button></a>
                                                                     <button class="btn monBag2 text-white" data-bs-dismiss="modal">Annuler</button>
@@ -235,7 +254,7 @@ $hasSuspend = null;
                                 </button>
                             </div>
                                         <p class="m-0 text-center py-3"><?= $chambre["nom"] ?></p>
-                                        <span class="fw-bold">Caracteristique</span>
+                                        <span class="fw-bold">Caracteristiques</span>
                                         <div class="d-flex gap-2">
                                             <?php if ($chambre["television"] == "oui"): ?>
                                                 <div style="width: 45px;height:45px;" class="d-flex justify-content-center align-items-center bg-light rounded-circle">
