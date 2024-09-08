@@ -178,13 +178,13 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
 
                                 <?php endforeach; ?>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div class="d-flex justify-content-between align-items-center mt-4 ">
                                 <a href="tel:+1234567890" class="btn text-white rounded d-flex align-items-center gap-2 monBag2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
                                     <span class="text-white ">Telephone</span>
                                     <i class="ri-phone-fill text-white"></i>
                                 </a>
                                 <a href="./detailsChambre.php?id=<?= $chambre["ID_Chambre"] ?>" class="text-decoration-none text-black">
-                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                    <div class="d-flex align-items-center gap-2 ">
                                         <span>Voir details</span>
                                         <i class="ri-arrow-right-circle-line"></i>
                                     </div>

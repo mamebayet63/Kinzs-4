@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':email' => $email,
             ]);
             if (envoyerEmailReservation($email, $nom, $prenom, $numero, $date_debut, $jours)) {
-                $_SESSION["success"] = "Réservation effectuée avec succèss et l'email a ete envoyer";
+                $_SESSION["success"] = "Demande de réservation effectuée avec succès. Un de nos agents vous contactera très bientôt pour la confirmation.";
                 header('Location: ../../views/users/chambre.php');
                 exit();
             }
