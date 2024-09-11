@@ -9,7 +9,7 @@
 }
 
 .hero-para {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .noir {
@@ -89,13 +89,13 @@
   font-size: 11px;
 }
 .monSize {
-  font-size: 11px;
+  font-size: 14px;
 }
 .couleur2 {
   color: #5c5c59;
 }
 .monSize2 {
-  font-size: 15px;
+  font-size: 12px;
 }
 .cont32:hover {
   transform: scale(1.1);
@@ -202,4 +202,7 @@ a {
 /* Afficher le texte au survol de l'image */
 .image-container:hover .overlay {
   opacity: 1; /* Rendre le texte visible */
+}
+.monSize3{
+  font-size: 16px;
 }

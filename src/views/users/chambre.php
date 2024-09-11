@@ -138,34 +138,38 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                            <p class="m-0 text-center p-1 text-white mt-3 fw-bolder monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill"><?= $chambre["nom"] ?></p>
-                            <p class="fw-bold mt-3">Caracteristiques</p>
+                            <div class="row">
+                                <span class="m-0 text-center p-1 fw-medium text-white monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill hero-para"><?= $chambre["nom"] ?></span>
+                            </div>
+                            <div class="row monCouleur">
+                                <span class="mt-3 monCouleur fw-semibold ">Caracteristiques</span>
+                            </div>
                             <div class="d-flex gap-2 mt-2">
                                 <?php if ($chambre["television"] == "oui"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-tv-2-line"></i>
-                                        <span>Television</span>
+                                        <i class="ri-tv-2-line monSize"></i>
+                                        <span class="monSize">Television</span>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($chambre["comodite"] == "ventiller"): ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-water-flash-line"></i>
-                                        <span>ventilateur</span>
+                                        <i class="ri-water-flash-line monSize"></i>
+                                        <span class="monSize">ventilateur</span>
                                     </div>
                                 <?php else: ?>
                                     <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class=" ri-fridge-line"></i>
-                                        <span>climatiseur</span>
+                                        <i class=" ri-fridge-line monSize"></i>
+                                        <span class="monSize">climatiseur</span>
                                     </div>
                                 <?php endif; ?>
                                 <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
 
-                                    <span><?= $chambre["dimension"] ?> (m²)</span>
+                                    <span class="monSize"><?= $chambre["dimension"] ?> (m²)</span>
                                 </div>
                             </div>
                             <div class="mt-2">
                                 <span class="fw-bold">Prix:</span>
-                                <span><?= $chambre["prix"] ?>FCFA</span>
+                                <span class="fw-bold"><?= $chambre["prix"] ?>FCFA</span>
                             </div>
                             <div class="monCoul2">
                                 <span class="fw-bold"><i class="ri-map-pin-fill"></i>: </span>

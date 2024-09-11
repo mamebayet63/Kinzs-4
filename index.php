@@ -34,6 +34,10 @@ $images = getImageGallerieWithId($pdo);
                 margin-left: 0px;
             }
 
+            .hero-title {
+                font-size: 30px;
+                text-align: center;
+            }
         }
 
         @media (max-width: 576px) {
@@ -42,7 +46,8 @@ $images = getImageGallerieWithId($pdo);
             }
 
             .hero-title {
-                font-size: 40px;
+                font-size: 30px;
+                text-align: center;
             }
         }
 
@@ -115,7 +120,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                         <div class="d-flex align-items-center p-0 p-sm-5" style="background-image: url(public/images/Group36.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100%;">
                             <div>
                                 <div class="w-100 py-5">
-                                    <h1 class="text-white hero-title py-5">Bienvenue chez <br> <span class="monCoul2">Kinz Résidences</span> </h1>
+                                    <h1 class="text-white hero-title px-3 px-md-0 py-5">Bienvenue chez <br> <span class="monCoul2">Kinz Résidences</span> </h1>
                                 </div>
 
                             </div>
@@ -151,7 +156,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex flex-column align-items-center justify-content-center mt-5">
+                <div class="col-12 d-flex flex-column align-items-center justify-content-center mt-0 mt-md-5">
                     <div class="line"></div>
                     <h2 class="mt-4 w-50 text-center">Explorez notre gallerie de chambre</h2>
                 </div>
@@ -165,7 +170,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 d-flex flex-column justify-content-between">
+                <div class="col-12  d-none d-md-block col-sm-6 d-flex flex-column justify-content-between">
                     <div class="row mt-3 mt-sm-0">
                         <div class="col-12 col-sm-12 col-lg-6" style="height: 30vh;">
                             <div class="gallerie1 rounded position-relative" style="background-image: url(public/images/gallerie-2.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100%;">
@@ -184,7 +189,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3 mt-sm-0">
+                    <div class="row mt-3 mt-sm-3">
                         <div class="col-12" style="height: 38vh;">
                             <div class="gallerie3 rounded position-relative" style="background-image: url(public/images/gallerie-4.svg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100%;">
                                 <div class="position-absolute bottom-0 end-0 d-flex gap-2 p-3">
@@ -205,9 +210,9 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex flex-column align-items-center justify-content-center mt-5">
+                <div class="col-12 d-flex flex-column align-items-center justify-content-center mt-0">
                     <div class="line"></div>
-                    <h2 class="mt-4 w-50 text-center">Découvrir nos chambres et suites</h2>
+                    <h2 class="mt-4 w-50 text-center fw-semibold">Découvrir nos chambres et suites</h2>
                 </div>
             </div>
             <!-- Partie chambre et suites -->
@@ -238,37 +243,43 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                            <p class="m-0 text-center p-1 fw-bolder text-white monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill"><?= $chambre["nom"] ?></p>
-                            <p class="fw-bold mt-3 monCouleur">Caracteristiques</p>
-                            <div class="d-flex gap-2 mt-2">
+                            <div class="row px-2">
+                            <span class="m-0 text-center p-1 fw-medium text-white monSize2 rounded mt-3 CardBagTitre monCouleur rounded-pill hero-para"><?= $chambre["nom"] ?></span>
+                            </div>
+                            <div class="row monCouleur">
+                                <span class="mt-3 monCouleur fw-semibold ">Caracteristiques</span>
+                            </div>
+                            <div class=" d-flex gap-2 mt-1 " >
                                 <?php if ($chambre["television"] == "oui"): ?>
-                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-tv-2-line"></i>
-                                        <span>Television</span>
+                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-1 p-1">
+                                        <i class="ri-tv-2-line monSize"></i>
+                                        <span  class="monSize">Television</span>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($chambre["comodite"] == "ventiller"): ?>
-                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
-                                        <i class="ri-water-flash-line"></i>
-                                        <span>ventilateur</span>
+                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-1 p-1">
+                                        <i class="ri-water-flash-line monSize"></i>
+                                        <span class="monSize">ventilateur</span>
                                     </div>
                                 <?php else: ?>
-                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1 CardBagTitre2 text-center ">
-                                        <i class=" ri-fridge-line"></i>
-                                        <span>climatiseur</span>
+                                    <div class="d-flex justify-content-center align-items-center bg-light rounded gap-1 p-1 CardBagTitre2 text-center ">
+                                        <i class=" ri-fridge-line monSize"></i>
+                                        <span class="monSize">climatiseur</span>
                                     </div>
                                 <?php endif; ?>
-                                <div class="d-flex justify-content-center align-items-center bg-light rounded gap-2 p-1">
+                                <div class=" d-flex justify-content-center align-items-center bg-light rounded gap-1 p-1 ">
 
-                                    <span><?= $chambre["dimension"] ?>(m²)</span>
-                                </div>
+                                    <span class="monSize"><?= $chambre["dimension"] ?>(m²)</span>
                             </div>
+                                
+                            </div>
+                            
                             <div class="mt-2">
                                 <span class="fw-bold">Prix:</span>
-                                <span><?= $chambre["prix"] ?>FCFA</span>
+                                <span class="fw-bold"><?= $chambre["prix"] ?>FCFA</span>
                             </div>
-                            <div class="monCoul2">
-                                <span class="fw-bold"><i class="ri-map-pin-fill"></i>: </span>
+                            <div class="monCoul2 mt-1">
+                                <span class="fw-bold"><i class="ri-map-pin-fill"></i> : </span>
                                 <?php foreach ($residences as  $residence): ?>
                                     <?php if ($chambre["ID_Residence"] == $residence["ID_Residence"]): ?>
                                         <a href="<?= $residence["position"] ?>" target="_blank">
@@ -278,13 +289,13 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
 
                                 <?php endforeach; ?>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <a href="tel:+1234567890" class="btn text-white rounded d-flex align-items-center gap-2 monBag2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
+                            <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                <a href="tel:+221763104000" class="btn text-white rounded d-flex align-items-center gap-2 monBag2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
                                     <span class="text-white ">Telephone</span>
                                     <i class="ri-phone-fill text-white"></i>
                                 </a>
                                 <a href="src/views/users/detailsChambre.php?id=<?= $chambre["ID_Chambre"] ?>" class="text-decoration-none text-black">
-                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                    <div class="d-flex align-items-center gap-2 ">
                                         <span>Voir details</span>
                                         <i class="ri-arrow-right-circle-line"></i>
                                     </div>

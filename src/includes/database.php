@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'kinzs-4');
+define('DB_HOST', 'mysql-kinz.alwaysdata.net');
+define('DB_USER', 'kinz');
+define('DB_PASS', 'passer25');
+define('DB_NAME', 'kinz_4');
 
 
 try {

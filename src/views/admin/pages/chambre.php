@@ -165,13 +165,14 @@ $hasSuspend = null;
                                         </form>
                                     </div>
                                 </div>
-                                <div class="row mt-4">
-                                    <div class="col-12 d-flex justify-content-end align-items-center gap-3  mt-sm-0">
+                                <div class="row mt-4 d-flex justify-content-end align-items-center gap-3">
+                                    <div class="col-8 col-md-3  mt-sm-0">
                                         <a href="../forms/formAdd/addChambre.php" class="btn monBag2 text-white d-flex align-items-center gap-2 text-white">
                                             <span>Nouvelle Chambre</span>
                                             <i class="ri-apps-2-add-line"></i>
                                         </a>
-                                        <div>
+                                    </div>   
+                                    <div class="col-9 col-md-4  mt-sm-0">
                                             <?php foreach ($chambreSansId as $chambreid) : ?>
                                                 <?php if ($chambreid["status"] == 2) {
                                                     $hasSuspend = true;
@@ -200,7 +201,7 @@ $hasSuspend = null;
                                                     </div>
                                                 </div>
                                             <?php else:  ?>
-                                                <a data-bs-toggle="modal" data-bs-target="#staticBackdropid1" class="btn btn-danger d-flex align-items-center gap-2 text-white">
+                                                <a data-bs-toggle="modal" data-bs-target="#staticBackdropid1" class="btn btn-danger d-flex align-items-center gap-2 text-white ">
                                                     <span>Suspendre les reservations</span>
                                                     <i class="ri-alert-fill"></i>
                                                 </a>
@@ -224,7 +225,7 @@ $hasSuspend = null;
 
                                         </div>
 
-                                    </div>
+                                    
                                 </div>
                                 <div class="row">
                                 <?php foreach ($chambres as $k => $chambre): ?>

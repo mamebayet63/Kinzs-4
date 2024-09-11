@@ -50,7 +50,7 @@ $chambres= getChambres($pdo);
                 </div>
             </div>
             <div class="row mt-4 d-flex justify-content-between">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="row">
                         <form method="GET" action="historique.php" class="bg-white shadow p-2 rounded">
                             <div class="d-flex align-items-center gap-2">
@@ -82,7 +82,7 @@ $chambres= getChambres($pdo);
                         </form>
                     </div>
                 </div>
-                <div class="col-7 bg-white rounded shadow overflow-auto">
+                <div class="col-12 mt-5 mt-md-0 col-md-7 bg-white rounded shadow overflow-auto">
                     <div class="row p-2">
                         <?php if (!empty($historiques)): ?>
                             <?php foreach ($historiques as $k => $historique): ?>
