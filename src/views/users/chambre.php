@@ -88,12 +88,12 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                     </ul>
                     <div class="d-flex align-items-center gap-3 ">
                         <!-- Bouton pour démarrer un appel téléphonique -->
-                        <a href="tel:+1234567890" class="btn monBag2 d-flex align-items-center  gap-2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
+                        <a href="tel:+221786820303" class="btn monBag2 d-flex align-items-center  gap-2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
                             <span class="text-white fs-6">Telephone</span>
                             <i class="ri-phone-fill fes-5 text-white"></i>
                         </a>
                         <!-- Icone WhatsApp avec un lien pour démarrer une discussion -->
-                        <a href="https://wa.me/777425714" target="_blank"> <!-- Remplacez 1234567890 par le numéro de téléphone au format international -->
+                        <a href="https://wa.me/786820303" target="_blank"> <!-- Remplacez 1234567890 par le numéro de téléphone au format international -->
                             <div class="monBag3 rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="ri-whatsapp-line text-white fs-4"></i>
                             </div>
@@ -183,7 +183,7 @@ https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css
                                 <?php endforeach; ?>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-4 ">
-                                <a href="tel:+1234567890" class="btn text-white rounded d-flex align-items-center gap-2 monBag2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
+                                <a href="tel:+221786820303" class="btn text-white rounded d-flex align-items-center gap-2 monBag2"> <!-- Remplacez +1234567890 par le numéro de téléphone à appeler -->
                                     <span class="text-white ">Telephone</span>
                                     <i class="ri-phone-fill text-white"></i>
                                 </a>
