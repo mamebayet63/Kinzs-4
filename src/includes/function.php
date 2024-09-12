@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 function notification($icon, $type, $message)
 {
     echo "
-    <div class='col-5 p-3 d-flex gap-3 align-items-center shadow-sm bg-white z-3 position-absolute top-0 start-50 translate-middle-x notif'>
+    <div class='col-10 col-md-5 p-3 d-flex gap-3 align-items-center shadow-sm bg-white z-3 position-absolute top-0 start-50 translate-middle-x notif'>
         <i class='$icon text-$type fs-4'></i>
         <p class='m-0'>$message</p>
         <div class='position-absolute top-0 end-0 p-1'>
@@ -166,12 +166,16 @@ function envoyerEmailReservation($userMail, $nom, $prenom, $numero, $dateDebut, 
         $mail->Password = 'qdctcqulbuezxfnt'; // Mot de passe d'application ou mot de passe de compte Google
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-
+    
         // Configuration de l'email
-        $mail->setFrom($userMail, 'Kinzs Residences');
-        $mail->addAddress('mamebayet63@gmail.com'); // Email de l'administrateur
+        $mail->setFrom($userMail, 'Kinz Residences');
+        
+        // Ajouter deux destinataires
+        $mail->addAddress('mamebayet63@gmail.com'); // Premier destinataire (administrateur)
+        $mail->addAddress('kinzsas@gmail.com'); // Deuxième destinataire
+    
         $mail->Subject = 'Nouvelle réservation';
-
+    
         // Construire le corps du message avec les détails de la réservation
         $mail->Body = "Vous avez une nouvelle réservation : \n\n" .
             "Nom : $nom\n" .
@@ -179,13 +183,14 @@ function envoyerEmailReservation($userMail, $nom, $prenom, $numero, $dateDebut, 
             "Numéro : $numero\n" .
             "Date de début : $dateDebut\n" .
             "Nombre de jours : $nombreJours\n";
-
+    
         // Envoi de l'email
         $mail->send();
         return true;
     } catch (Exception $e) {
         return "La réservation a été effectuée mais l'envoi de l'email a échoué. Erreur: {$e->getMessage()}";
     }
+    
 }
 
 function getImageGallerieWithId($pdo, $id = null)
